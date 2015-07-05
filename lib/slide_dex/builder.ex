@@ -19,6 +19,11 @@ defmodule SlideDex.Builder do
   """
 
   def all do
+    unless File.exists?("../../priv/static/") do
+      File.mkdir("../../priv")
+      File.mkdir("../../priv/static")
+    end
+
     for slide <- slides do
       slide_content = slide |> Earmark.to_html
       file_content = @page_head <> slide_content <> @page_foot

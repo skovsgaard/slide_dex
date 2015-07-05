@@ -2,8 +2,8 @@ defmodule Elixir101.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :elixir101,
-     version: "0.0.1",
+    [app: :slide_dex,
+     version: "0.0.2",
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
